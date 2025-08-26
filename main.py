@@ -22,10 +22,10 @@ def is_already_running(mutex_name="Global\\OCR_Screenshot_Singleton"):
 
 
 def run_screenclip_and_ocr():
-    # Launch Windows built-in snip GUI (Win+Shift+S)
+    # built-in snip GUI (Win+Shift+S)
     Popen(["explorer.exe", "ms-screenclip:"])
 
-    # Give user time to snip (poll clipboard until image arrives)
+    # poll until image in clipboard
     print("Select an area with the snipping tool...")
     image = None
     for _ in range(30):  # wait up to 15 seconds
